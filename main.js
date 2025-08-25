@@ -375,6 +375,7 @@ function create() {
     .setVisible(false);
 
   playAgainButton.on("pointerdown", () => {
+    correctCount = 0; // reset score
     this.scene.restart();
   });
 }
