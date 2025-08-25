@@ -100,7 +100,7 @@ function create() {
   let dropzones = [];
   for (let i = 0; i < 5; i++) {
     let box = this.add
-      .rectangle(centerX + 480, 150 + i * 100, 300, 80, 0xe3f2fd)
+      .rectangle(centerX + 420, 150 + i * 100, 530, 80, 0xe3f2fd)
       .setStrokeStyle(2, 0x999999)
       .setInteractive({ dropZone: true });
 
@@ -108,7 +108,7 @@ function create() {
     dropzones.push(box);
 
     this.add
-      .image(centerX + 280, 150 + i * 100, "sila" + (i + 1) + "icon")
+      .image(centerX + 110, 150 + i * 100, "sila" + (i + 1) + "icon")
       .setDisplaySize(60, 60);
   }
   // 🔀 Acak urutan teks sila
@@ -150,8 +150,8 @@ function create() {
   this.input.on("drop", (pointer, gameObject, dropZone) => {
     if (dropZone.silaId === gameObject.silaId) {
       dropZone.fillColor = 0xa5d6a7;
-      gameObject.x = dropZone.x - 120;
-      gameObject.y = dropZone.y - 20;
+      gameObject.x = dropZone.x - 250;
+      gameObject.y = dropZone.y - 10;
       gameObject.disableInteractive();
       correctCount++;
 
