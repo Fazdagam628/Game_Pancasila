@@ -15,6 +15,8 @@ const config = {
   scene: { preload, create },
 };
 
+const boxPosX = 420;
+const imagePosX = 110
 let correctCount = 0;
 let statusText, flag, white;
 let sfxCorrect, sfxWrong, sfxWin;
@@ -100,7 +102,7 @@ function create() {
   let dropzones = [];
   for (let i = 0; i < 5; i++) {
     let box = this.add
-      .rectangle(centerX + 420, 150 + i * 100, 530, 80, 0xe3f2fd)
+      .rectangle(centerX + boxPosX, 150 + i * 100, 530, 80, 0xe3f2fd)
       .setStrokeStyle(2, 0x999999)
       .setInteractive({ dropZone: true });
 
@@ -108,7 +110,7 @@ function create() {
     dropzones.push(box);
 
     this.add
-      .image(centerX + 110, 150 + i * 100, "sila" + (i + 1) + "icon")
+      .image(centerX + imagePosX, 150 + i * 100, "sila" + (i + 1) + "icon")
       .setDisplaySize(60, 60);
   }
   // 🔀 Acak urutan teks sila
@@ -237,7 +239,7 @@ function create() {
         yoyo: true,
         repeat: 3,
         onComplete: () => {
-          dropZone.x = centerX + 480;
+          dropZone.x = centerX + boxPosX;
         },
       });
     }
