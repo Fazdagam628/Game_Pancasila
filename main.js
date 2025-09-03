@@ -2,7 +2,7 @@ const silaTexts = [
   "Ketuhanan Yang Maha Esa",
   "Kemanusiaan yang adil dan beradab",
   "Persatuan Indonesia",
-  "Kerakyatan yang dipimpin oleh hikmat kebijaksanaan",
+  "Kerakyatan yang dipimpin oleh hikmat kebijaksanaan dalam permusyarawatan perwakilan",
   "Keadilan sosial bagi seluruh rakyat Indonesia",
 ];
 
